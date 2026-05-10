@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Read & Write Classes</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+margin:0;
+font-family:Poppins;
+background:#f5f7fa;
+}
+
+/* ✅ ONLY PHOTO AUTO FIT CHANGED */
+.hero{
+position:relative;
+width:100%;
+overflow:hidden;
+}
+
+.hero img{
+width:100%;
+height:auto;
+display:none;
+object-fit:contain;
+}
+
+.hero img.active{
+display:block;
+}
+
+nav{
+background:#222;
+padding:10px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+}
+
+section{
+padding:30px;
+max-width:1000px;
+margin:auto;
+}
+
+h2{
+color:#e53935;
+}
+
+.card{
+background:white;
+padding:20px;
+margin:15px 0;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ✅ ONLY PHOTO AUTO FIT CHANGED */
+.slider{
+position:relative;
+width:100%;
+overflow:hidden;
+border-radius:10px;
+}
+
+.slider img{
+width:100%;
+height:auto;
+display:none;
+object-fit:contain;
+}
+
+.slider img.active{
+display:block;
+}
+
+/* FORM */
+.form input,
+.form select,
+.form textarea{
+width:100%;
+padding:10px;
+margin:8px 0;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+button{
+background:#e53935;
+color:white;
+padding:10px 20px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* MAP */
+.map iframe{
+width:100%;
+height:350px;
+border:0;
+}
+
+/* INSTAGRAM */
+.social{
+text-align:center;
+margin:30px 0;
+}
+
+.insta-btn{
+display:inline-block;
+padding:12px 25px;
+border-radius:30px;
+background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);
+color:white;
+text-decoration:none;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+width:60px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+font-size:28px;
+text-decoration:none;
+}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+<img src="banner.jpg.jpeg" class="active">
+<img src="2.jpg.jpeg">
+<img src="3.jpg.jpeg">
+</div>
+
+<!-- NAVBAR -->
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#courses">Courses</a>
+<a href="#admission">Admission</a>
+<a href="#location">Location</a>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+
+<h2>Complete Coaching for School and Board Students</h2>
+
+<p>
+Coaching for Nursery to Class 12 with personal attention
+</p>
+
+<div class="card">
+
+<ul>
+<li>All subjects coaching from basic to advanced</li>
+<li>Special focus on board exam preparation</li>
+<li>Regular tests and performance tracking</li>
+<li>Personal attention in small batches</li>
+<li>Extra support for weak students</li>
+<li>Doubt-solving sessions for every student</li>
+</ul>
+
+<a href="#admission">
+<button>Book a Free Demo Class</button>
+</a>
+
+<a href="https://wa.me/919537081242" target="_blank">
+<button>Contact Us Today</button>
+</a>
+
+<p>
+At Read & Write Classes, we provide complete academic support for students from Nursery to Class 12.
+Our focus is on building clear concepts, improving performance, and preparing students for school and board exams.
+</p>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+
+<h2>About Us</h2>
+
+<div class="slider">
+<img src="sir1.jpg.jpeg" class="active">
+<img src="sir2.jpg.jpeg">
+<img src="sir3.jpg.jpeg">
+<img src="sir4.jpg.jpeg">
+</div>
+
+<div class="card">
+
+<p>
+Read & Write Classes is committed to providing quality education to students of all levels.
+We focus on strong concept clarity, regular practice, and continuous improvement.
+</p>
+
+<p>
+Our teaching approach is simple, effective, and result-oriented.
+We help students perform better in school as well as in board examinations by giving them the right guidance and support.
+</p>
+
+<ul>
+<li>Experienced and dedicated teaching</li>
+<li>Personal attention to each student</li>
+<li>Regular tests and progress monitoring</li>
+<li>Supportive and disciplined environment</li>
+</ul>
+
+</div>
+</section>
+
+<!-- COURSES -->
+<section id="courses">
+
+<h2>Our Courses</h2>
+
+<div class="card">
+
+<h3>Nursery to Sr. KG</h3>
+
+<ul>
+<li>Basic learning and activity-based teaching</li>
+<li>Writing and recognition skills</li>
+</ul>
+
+<h3>Class 1 to 8</h3>
+
+<ul>
+<li>All subjects coaching</li>
+<li>Strong concept building</li>
+<li>Regular practice and tests</li>
+</ul>
+
+<h3>Class 9 & 10 (Board Focus)</h3>
+
+<ul>
+<li>Maths and Science specialization</li>
+<li>Complete board exam preparation</li>
+<li>Important questions and paper practice</li>
+<li>Weekly tests and revision</li>
+</ul>
+
+<h3>Class 11 & 12</h3>
+
+<ul>
+<li>Subject-wise coaching</li>
+<li>Exam-oriented preparation</li>
+</ul>
+
+</div>
+</section>
+
+<!-- ADMISSION -->
+<section id="admission">
+
+<h2>Admissions Open (2026–27)</h2>
+
+<div class="card">
+
+<p>
+Enroll your child today and give them the right guidance for academic success.
+Limited seats available.
+</p>
+
+<h3>Why Choose Us</h3>
+
+<ul>
+<li>Small batches for better attention</li>
+<li>Special guidance for board students</li>
+<li>Regular tests and performance analysis</li>
+<li>Doubt-solving and revision sessions</li>
+<li>Focus on overall academic improvement</li>
+</ul>
+
+</div>
+
+<div class="card" style="margin-top:30px;">
+
+<h3>Admission Form</h3>
+
+<form id="form" class="form">
+
+<input type="text" name="Student Name" placeholder="Student Name" required>
+
+<input type="text" name="Father Name" placeholder="Father Name">
+
+<input type="text" name="Mother Name" placeholder="Mother Name">
+
+<input type="date" name="DOB">
+
+<select name="Gender">
+<option>Male</option>
+<option>Female</option>
+</select>
+
+<input type="text" name="Address" placeholder="Address">
+
+<input type="tel" name="Mobile" placeholder="Parent Mobile">
+
+<input type="tel" name="WhatsApp" placeholder="WhatsApp Number">
+
+<input type="text" name="School Name" placeholder="School Name">
+
+<input type="text" name="Board" placeholder="Board">
+
+<button type="submit">Apply Now</button>
+
+</form>
+
+<h3>Contact Details</h3>
+
+<p><b>Address:</b> 9, Shivaji Park 2, Navagam Dindoli Rd, Surat</p>
+
+<p><b>Phone:</b> 9537081242</p>
+
+</div>
+</section>
+
+<!-- LOCATION -->
+<section id="location">
+
+<h2>Location</h2>
+
+<div class="card map">
+
+<iframe 
+src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3720.909792865931!2d72.86002428!3d21.15598791!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be051b93a40dabf%3A0x3bdaa654d6f617d4!2sREAD%20%26%20WRITE%20CLASSES!5e0!3m2!1sen!2sin!4v1778036303246!5m2!1sen!2sin"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+</div>
+
+<div style="text-align:center;margin-top:10px;">
+<a href="https://maps.google.com/?q=READ%20%26%20WRITE%20CLASSES" target="_blank">
+📍 Open in Google Maps
+</a>
+</div>
+
+</section>
+
+<!-- INSTAGRAM -->
+<div class="social">
+
+<a href="https://www.instagram.com/readandwriteclasses?igsh=MTZpNmt2end3NnB4OA==" target="_blank" class="insta-btn">
+<i class="fab fa-instagram"></i>
+Follow us on Instagram
+</a>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+
+<p>
+Admissions Open for 2026–27 | Free Demo Class Available
+</p>
+
+<p>
+From basic learning to board exam success, we support every student at every stage.
+</p>
+
+<p>
+Limited students per batch for better attention and better results.
+</p>
+
+</footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/919537081242" target="_blank" class="whatsapp">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+
+/* HERO SLIDER */
+let hero=document.querySelectorAll(".hero img");
+let h=0;
+
+hero[0].classList.add("active");
+
+setInterval(()=>{
+hero[h].classList.remove("active");
+h=(h+1)%hero.length;
+hero[h].classList.add("active");
+},3000);
+
+/* ABOUT SLIDER */
+document.querySelectorAll(".slider").forEach(s=>{
+
+let imgs=s.querySelectorAll("img");
+let i=0;
+
+imgs[0].classList.add("active");
+
+setInterval(()=>{
+imgs[i].classList.remove("active");
+i=(i+1)%imgs.length;
+imgs[i].classList.add("active");
+},3000);
+
+});
+
+/* FORM TO WHATSAPP */
+document.getElementById("form").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+let data=new FormData(this);
+
+let msg="New Admission:%0A";
+
+data.forEach((v,k)=>{
+msg+=k+": "+v+"%0A";
+});
+
+window.open("https://wa.me/919537081242?text="+msg);
+
+});
+
+</script>
+
+</body>
+</html>
