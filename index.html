@@ -464,50 +464,57 @@ Limited students per batch for better attention and better results.
 
 <script>
 
-/* HERO SLIDER */
-let hero=document.querySelectorAll(".hero img");
-let h=0;
+function sendToWhatsApp(){
 
-hero[0].classList.add("active");
+let studentName = document.getElementById("studentName").value;
+let fatherName = document.getElementById("fatherName").value;
+let motherName = document.getElementById("motherName").value;
+let dob = document.getElementById("dob").value;
+let studentClass = document.getElementById("studentClass").value;
+let gender = document.getElementById("gender").value;
+let address = document.getElementById("address").value;
+let parentMobile = document.getElementById("parentMobile").value;
+let whatsappNumber = document.getElementById("whatsappNumber").value;
+let schoolName = document.getElementById("schoolName").value;
+let board = document.getElementById("board").value;
 
-setInterval(()=>{
-hero[h].classList.remove("active");
-h=(h+1)%hero.length;
-hero[h].classList.add("active");
-},3000);
+if(
+studentName=="" ||
+fatherName=="" ||
+motherName=="" ||
+dob=="" ||
+studentClass=="" ||
+gender=="" ||
+address=="" ||
+parentMobile=="" ||
+whatsappNumber=="" ||
+schoolName=="" ||
+board==""
+){
+alert("Please fill all fields");
+return;
+}
 
-/* ABOUT SLIDER */
-document.querySelectorAll(".slider").forEach(s=>{
+let message =
+"New Admission Form\n\n"+
+"Student Name: "+studentName+"\n"+
+"Father Name: "+fatherName+"\n"+
+"Mother Name: "+motherName+"\n"+
+"Date of Birth: "+dob+"\n"+
+"Class: "+studentClass+"\n"+
+"Gender: "+gender+"\n"+
+"Address: "+address+"\n"+
+"Parent Mobile: "+parentMobile+"\n"+
+"WhatsApp Number: "+whatsappNumber+"\n"+
+"School Name: "+schoolName+"\n"+
+"Board: "+board;
 
-let imgs=s.querySelectorAll("img");
-let i=0;
+let url =
+"https://wa.me/919537081242?text=" + encodeURIComponent(message);
 
-imgs[0].classList.add("active");
+window.open(url, "_blank");
 
-setInterval(()=>{
-imgs[i].classList.remove("active");
-i=(i+1)%imgs.length;
-imgs[i].classList.add("active");
-},3000);
-
-});
-
-/* FORM TO WHATSAPP */
-document.getElementById("form").addEventListener("submit",function(e){
-
-e.preventDefault();
-
-let data=new FormData(this);
-
-let msg="New Admission:%0A";
-
-data.forEach((v,k)=>{
-msg+=k+": "+v+"%0A";
-});
-
-window.open("https://wa.me/919537081242?text="+msg);
-
-});
+}
 
 </script>
 
