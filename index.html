@@ -517,51 +517,7 @@ Limited students per batch for better attention and better results.
 
 function sendToWhatsApp() {
 
-let studentName = document.getElementById("studentName").value;
-let fatherName = document.getElementById("fatherName").value;
-let motherName = document.getElementById("motherName").value;
-let dob = document.getElementById("dob").value;
-let studentClass = document.getElementById("studentClass").value;
-let gender = document.getElementById("gender").value;
-let address = document.getElementById("address").value;
-let parentMobile = document.getElementById("parentMobile").value;
-let whatsappNumber = document.getElementById("whatsappNumber").value;
-let schoolName = document.getElementById("schoolName").value;
-let board = document.getElementById("board").value;
-
-if (
-studentName === "" ||
-fatherName === "" ||
-motherName === "" ||
-dob === "" ||
-studentClass === "" ||
-gender === "" ||
-address === "" ||
-parentMobile === "" ||
-whatsappNumber === "" ||
-schoolName === "" ||
-board === ""
-) {
-alert("Please fill all fields");
-return;
-}
-
-let message =
-"New Admission Form\n\n" +
-"Student Name: " + studentName + "\n" +
-"Father Name: " + fatherName + "\n" +
-"Mother Name: " + motherName + "\n" +
-"Date of Birth: " + dob + "\n" +
-"Class: " + studentClass + "\n" +
-"Gender: " + gender + "\n" +
-"Address: " + address + "\n" +
-"Parent Mobile: " + parentMobile + "\n" +
-"WhatsApp Number: " + whatsappNumber + "\n" +
-"School Name: " + schoolName + "\n" +
-"Board: " + board;
-
-let url = "https://wa.me/919537081242?text=" + encodeURIComponent(message);
-
+...
 window.location.href = url;
 
 }
