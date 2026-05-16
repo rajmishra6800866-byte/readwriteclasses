@@ -175,7 +175,7 @@ padding:20px;
 <h2>Complete Coaching for School and Board Students</h2>
 
 <p>
-Coaching for Nursery to Class 12 
+Coaching for Nursery to Class 12 with personal attention
 </p>
 
 <div class="card">
@@ -268,7 +268,6 @@ We help students perform better in school as well as in board examinations by gi
 <li>Complete board exam preparation</li>
 <li>Important questions and paper practice</li>
 <li>Weekly tests and revision</li>
-<li>Subject-wise coaching</li>
 </ul>
 
 <h3>Class 11 & 12</h3>
@@ -304,7 +303,6 @@ Limited seats available.
 </ul>
 
 </div>
-
 <div class="admission-form" id="admission">
 
 <h2>Admission Form</h2>
@@ -515,12 +513,50 @@ Limited students per batch for better attention and better results.
 
 <script>
 
-function sendToWhatsApp() {
+/* HERO SLIDER */
+let hero=document.querySelectorAll(".hero img");
+let h=0;
 
-...
-window.location.href = url;
+hero[0].classList.add("active");
 
-}
+setInterval(()=>{
+hero[h].classList.remove("active");
+h=(h+1)%hero.length;
+hero[h].classList.add("active");
+},3000);
+
+/* ABOUT SLIDER */
+document.querySelectorAll(".slider").forEach(s=>{
+
+let imgs=s.querySelectorAll("img");
+let i=0;
+
+imgs[0].classList.add("active");
+
+setInterval(()=>{
+imgs[i].classList.remove("active");
+i=(i+1)%imgs.length;
+imgs[i].classList.add("active");
+},3000);
+
+});
+
+/* FORM TO WHATSAPP */
+document.getElementById("form").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+let data=new FormData(this);
+
+let msg="New Admission:%0A";
+
+data.forEach((v,k)=>{
+msg+=k+": "+v+"%0A";
+});
+
+window.open("https://wa.me/919537081242?text="+msg);
+
+});
 
 </script>
 
